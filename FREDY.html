@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Fútbol</title>
+    <style>
+        /* Estilos CSS opcionales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .image-container img {
+            width: 48%;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .image-container img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Página de Fútbol</h1>
+    </header>
+    <section>
+        <div class="container">
+            <h2>Las meras venas</h2>
+            <p>los mamabichos mas grandes de europa</p>
+            <div class="image-container">
+               
+                <img src="img/messi-cr7_1.jpg" alt="dios y dios">
+                <!-- Espacio para la segunda imagen -->
+                <img src="img/images.jpg" alt="mi jefe">
+                <!-- Continúa agregando imágenes según sea necesario -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
