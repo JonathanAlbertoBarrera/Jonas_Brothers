@@ -6,11 +6,70 @@
     <title>Sistema de órdenes de cafetería</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .barra{
+            background-color:#F4AB2C;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary barra">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="#">Cafetería</a>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Bebidas</a></li>
+                          <li><a class="dropdown-item" href="#">Galletas</a></li>
+                          <li><a class="dropdown-item" href="#">Botanas</a></li>
+                        </ul>
+                    </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Marcas
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Gamesa</a></li>
+                      <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                      <li><a class="dropdown-item" href="#">Barcel</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item mr-2 col-10 me-3">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn" type="submit"><img src="img/search.png" alt="Icono de Busqueda"  width="30" height="24"></button>
+                  </form>
+                  </li>
+                  <li class="nav-item me-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/carritoLogo.png" alt="Bootstrap" width="30" height="24">
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Cuenta
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
+                      <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
 
-
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
