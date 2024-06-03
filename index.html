@@ -22,59 +22,36 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary barra">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+   <!-- BARRA NAVEGACION -->
+   <header>
+    <nav class="navbar navbar-expand-lg barra">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cafetería</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <a class="navbar-brand" href="#">Cafetería</a>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item dropdown col-3">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="#">
+                        <img src="img/carritoLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Carrito de compra
+                    </a>
+                    <a class="nav-link" href="#">
+                        <img src="img/orden.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Órdenes
+                    </a>
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Categorías
+                            <img src="img/login.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Cuenta
                         </a>
-                        <ul class="dropdown-menu col-3">
-                          <li><a class="dropdown-item" href="#">Bebidas</a></li>
-                          <li><a class="dropdown-item" href="#">Galletas</a></li>
-                          <li><a class="dropdown-item" href="#">Botanas</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
                         </ul>
                     </li>
-                  <li class="nav-item dropdown me-4">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Marcas
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Gamesa</a></li>
-                      <li><a class="dropdown-item" href="#">Coca cola</a></li>
-                      <li><a class="dropdown-item" href="#">Barcel</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item mr-2 col-10 me-4">
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn" type="submit"><img src="img/search.png" alt="Icono de Busqueda"  width="30" height="24"></button>
-                  </form>
-                  </li>
-                  <li class="nav-item me-4 col-3">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/carritoLogo.png" alt="Bootstrap" width="30" height="24">
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Cuenta
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
-                      <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </div>
-          </nav>
+        </div>
+      </nav>
     </header>
 
     <main>
