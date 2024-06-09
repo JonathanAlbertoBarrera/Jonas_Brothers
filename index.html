@@ -10,175 +10,105 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="css/bootstrap.css">
     <style>
-        .barra{
+        .barra {
             background-color:#F4AB2C;
         }
-        main{
+        main {
             text-align: center;
         }
         body {
-        font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
     </style>
+    <script src="js/mostrarProductos.js" defer></script>
 </head>
 <body>
-   <!-- BARRA NAVEGACION -->
-   <header>
-    <nav class="navbar navbar-expand-lg barra">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Cafetería</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav mx-auto">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link" href="#">
-                        <img src="img/carritoLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Carrito de compra
-                    </a>
-                    <a class="nav-link" href="#">
-                        <img src="img/orden.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Órdenes
-                    </a>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="img/login.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Cuenta
+    <!-- BARRA NAVEGACION -->
+    <header>
+        <nav class="navbar navbar-expand-lg barra">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cafetería</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="#">
+                            <img src="img/carritoLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Carrito de compra
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
-                            <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
-                        </ul>
-                    </li>
+                        <a class="nav-link" href="#">
+                            <img src="img/orden.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Órdenes
+                        </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="img/login.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Cuenta
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="login.html">Iniciar Sesión</a></li>
+                                <li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </div>
             </div>
-        </div>
-      </nav>
+        </nav>
     </header>
 
     <main>
-         <!-- DIV PARA BUSCAR -->
+        <!-- DIV PARA BUSCAR -->
         <div class="container mt-3">
             <div class="row justify-content-center">
                 <div class="col-md-3 mb-2 d-flex">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn" type="submit"><img src="img/search.png" alt="Icono de Busqueda"  width="30" height="24"></button>
+                    <button class="btn" type="submit"><img src="img/search.png" alt="Icono de Busqueda" width="30" height="24"></button>
                 </div>
-                <div  class="col-md-3 mb-2 d-flex">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Categoría</option>
-                        <option value="1">Bebidas</option>
-                        <option value="2">Galletas</option>
-                        <option value="3">Botanas</option>
-                      </select>
+                <div class="col-md-3 mb-2 d-flex">
+                    <select class="form-select" aria-label="Default select example" id="SelectCategoria">
+                        <option selected disabled hidden>Categoría</option>
+                        <option value="Bebidas">Bebidas</option>
+                        <option value="Galletas">Galletas</option>
+                        <option value="Botanas">Botanas</option>
+                    </select>
                 </div>
-                <div  class="col-md-3 mb-2 d-flex">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Marca</option>
-                        <option value="1">Gamesa</option>
-                        <option value="2">Coca-cola</option>
-                        <option value="3">Barcel</option>
-                      </select>
+                <div class="col-md-3 mb-2 d-flex">
+                    <select class="form-select" aria-label="Default select example" id="SelectMarca">
+                        <option selected disabled hidden>Marca</option>
+                        <option value="Gamesa">Gamesa</option>
+                        <option value="Coca-cola">Coca-cola</option>
+                        <option value="Doritos">Doritos</option>
+                    </select>
                 </div>
             </div>
-
         </div>
+
         <!-- DIV PRODUCTOS -->
         <div class="container mt-4">
-            <h2>Productos Más Vendidos</h2>
-            <div class="row">
-              <!-- Primer producto -->
-              <div class="col-md-3 mb-2">
-                <div class="card h-100">
-                  <img src="img/coca.jpg" class="card-img-top" height="60%" alt="Coca-Cola">
-                  <div class="card-body">
-                    <h3 class="card-title">Coca-Cola</h3>
-                    <p class="card-text">$20.00</p>
-                    <p class="card-text">Refresco Coca Cola sabor original 600 ml</p>
-                    <div class="container mt-3">
-                        <div class="row justify-content-center">
-                            <button class="btn btn-success col-md-3 mb-2 me-2">+</button></a>
-                            <input disabled type="number" name="" id="" class="col-md-3 mb-2 me-2">
-                            <button class="btn btn-danger col-md-3 mb-2">-</button></a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Segundo producto -->
-              <div class="col-md-3 mb-2">
-                <div class="card h-100">
-                  <img src="img/doritos.png" class="card-img-top" height="60%" alt="Coca-Cola">
-                  <div class="card-body">
-                    <h3 class="card-title">Doritos</h3>
-                    <p class="card-text">$18.00</p>
-                    <p class="card-text">Botana Doritos flamin’ hot 61 g</p>
-                    <div class="container mt-3">
-                        <div class="row justify-content-center">
-                            <button class="btn btn-success col-md-3 mb-2 me-2">+</button></a>
-                            <input disabled type="number" name="" id="" class="col-md-3 mb-2 me-2">
-                            <button class="btn btn-danger col-md-3 mb-2">-</button></a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Tercer producto -->
-              <div class="col-md-3 mb-2">
-                <div class="card h-100">
-                  <img src="img/chilaquilesVerdes.png" class="card-img-top" height="60%" alt="Coca-Cola">
-                  <div class="card-body">
-                    <h3 class="card-title">Chilaquiles</h3>
-                    <p class="card-text">$45.00</p>
-                    <p class="card-text">Chilaquiles verdes con pollo</p>
-                    <div class="container mt-3">
-                        <div class="row justify-content-center">
-                            <button class="btn btn-success col-md-3 mb-2 me-2">+</button></a>
-                            <input disabled type="number" name="" id="" class="col-md-3 mb-2 me-2">
-                            <button class="btn btn-danger col-md-3 mb-2">-</button></a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-                 <!-- Cuarto producto -->
-                 <div class="col-md-3 mb-2">
-                    <div class="card h-100">
-                      <img src="img/tortaJamon.jpg" class="card-img-top"  height="60%" alt="Coca-Cola">
-                      <div class="card-body">
-                        <h3 class="card-title">Torta de jamón</h3>
-                        <p class="card-text">$45.00</p>
-                        <p class="card-text">Torta de salchicha con lechuga y jitomate</p>
-                        <div class="container mt-3">
-                            <div class="row justify-content-center">
-                                <button class="btn btn-success col-md-3 mb-2 me-2">+</button></a>
-                                <input disabled type="number" name="" id="" class="col-md-3 mb-2 me-2">
-                                <button class="btn btn-danger col-md-3 mb-2">-</button></a>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <h2 id="titSeccion">Productos Más Vendidos</h2>
+            <div class="row" id="product-cards-container">
+                <!-- Aquí se añadirán dinámicamente las tarjetas de productos -->
             </div>
-          </div>
+        </div>
 
-          <!-- PAGINACIÓN -->
-          <nav aria-label="...">
+        <!-- PAGINACIÓN -->
+        <nav aria-label="...">
             <h6>Ver más</h6>
             <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <span class="page-link">Previous</span>
-              </li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item" aria-current="page">
-                <span class="page-link">2</span>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" aria-current="page">
+                    <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
             </ul>
-          </nav>
+        </nav>
     </main>
-    
+
     <footer class="bg-body-tertiary text-black text-center py-3 barra">
         <div class="container">
             <p>&copy; 2024 Mi Cafetería. Todos los derechos reservados.</p>
