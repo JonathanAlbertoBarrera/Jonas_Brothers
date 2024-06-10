@@ -23,10 +23,10 @@ const categorias = {
 // Datos de productos más vendidos
 const masVendidos = {
     Img: [
-        "../img/coca.jpg",
-        "../img/doritos.png",
-        "../img/chilaquilesVerdes.png",
-        "../img/tortaJamon.jpg"
+        "img/coca.jpg",
+        "img/doritos.png",
+        "img/chilaquilesVerdes.png",
+        "img/tortaJamon.jpg"
     ],
     Title: [
         "Coca-Cola 600ml",
