@@ -19,6 +19,13 @@
         body {
             font-family: 'Montserrat', sans-serif;
         }
+        .hidden {
+      display: none;
+        }
+        .botonesApp{
+            background-color: #F4AB2C;
+            border-color:#F4AB2C;
+        }
     </style>
     <script src="js/mostrarProductos.js" defer></script>
 </head>
@@ -33,8 +40,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link active" aria-current="page" onclick="regresarMasVendidos()" href="#">Inicio</a>
+                        <a class="nav-link" href="carrito.html">
                             <img src="img/carritoLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Carrito de compra
                         </a>
                         <a class="nav-link" href="#">
@@ -72,12 +79,13 @@
                     </select>
                 </div>
                 <div class="col-md-3 mb-2 d-flex">
-                    <select class="form-select" aria-label="Default select example" id="SelectMarca">
+                    <select class="form-select me-2" aria-label="Default select example" id="SelectMarca">
                         <option selected disabled hidden>Marca</option>
                         <option value="Gamesa">Gamesa</option>
                         <option value="Coca-cola">Coca-cola</option>
                         <option value="Doritos">Doritos</option>
                     </select>
+                    <button class="btn btn-dark botonesApp" onclick="mostrarSeleccionados()">Seleccionados</button>
                 </div>
             </div>
         </div>
@@ -92,6 +100,8 @@
 
         <!-- PAGINACIÓN -->
         <nav aria-label="...">
+            <br>
+            <br>
             <h6>Ver más</h6>
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
