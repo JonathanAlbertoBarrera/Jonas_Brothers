@@ -125,11 +125,12 @@ function mostrarProductos(imgArray, titleArray, priceArray, descArray, esSelecci
 
     // Registrar eventos después de añadir las tarjetas
     document.querySelectorAll('.botonMas').forEach((button, index) => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Evitar que el formulario se envíe
             const inputCantidad = document.querySelectorAll('.inputCantidad')[index];
             const botonMenos = document.querySelectorAll('.botonMenos')[index];
             const title = document.querySelectorAll('.card-title')[index].textContent;
-
+    
             inputCantidad.classList.remove('hidden');
             botonMenos.classList.remove('hidden');
             inputCantidad.value = parseInt(inputCantidad.value) + 1;
@@ -138,17 +139,19 @@ function mostrarProductos(imgArray, titleArray, priceArray, descArray, esSelecci
             actualizarBotones(inputCantidad, botonMenos);
         });
     });
-
+    
     document.querySelectorAll('.botonMenos').forEach((button, index) => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Evitar que el formulario se envíe
             const inputCantidad = document.querySelectorAll('.inputCantidad')[index];
             const title = document.querySelectorAll('.card-title')[index].textContent;
-
+    
             inputCantidad.value = parseInt(inputCantidad.value) - 1;
             estadoCantidades[title] = parseInt(inputCantidad.value);
             actualizarBotones(inputCantidad, button);
         });
     });
+    
 
     function actualizarBotones(inputCantidad, botonMenos) {
         if (parseInt(inputCantidad.value) <= 0) {
