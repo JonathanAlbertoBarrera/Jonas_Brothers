@@ -1,22 +1,22 @@
 // Datos de categorías
 const categorias = {
     "Bebidas": {
-        Img: ["../img/coca.jpg", ""],
-        Title: ["Coca-Cola 600ml", ""],
-        Precios: ["20.00", ""],
-        Descripciones: ["Refresco Coca Cola sabor original 600 ml", ""]
+        Img: ["img/coca.jpg",],
+        Title: ["Coca-Cola 600ml",],
+        Precios: ["20.00",],
+        Descripciones: ["Refresco Coca Cola sabor original 600 ml",]
     },
     "Galletas": {
-        Img: ["../img/", "../img/"],
-        Title: ["", ""],
-        Precios: ["", ""],
-        Descripciones: ["", ""]
+        Img: [],
+        Title: [],
+        Precios: [],
+        Descripciones: []
     },
     "Botanas": {
-        Img: ["../img/doritos.png", "../img/"],
-        Title: ["Doritos xtra flamin’ hot", ""],
-        Precios: ["18.00", ""],
-        Descripciones: ["Botana Doritos xtra flamin’ hot 61 g", ""]
+        Img: ["img/doritos.png",],
+        Title: ["Doritos xtra flamin’ hot",],
+        Precios: ["18.00",],
+        Descripciones: ["Botana Doritos xtra flamin’ hot 61 g",]
     }
 };
 
@@ -51,22 +51,22 @@ const masVendidos = {
 // Datos de marcas
 const marcas = {
     "Gamesa": {
-        Img: ["../img/", "../img/"],
-        Title: ["", ""],
-        Precios: ["", ""],
-        Descripciones: ["", ""]
+        Img: [],
+        Title: [],
+        Precios: [],
+        Descripciones: []
     },
     "Coca-cola": {
-        Img: ["../img/coca.jpg", "../img/"],
-        Title: ["Coca-Cola 600ml", ""],
-        Precios: ["20.00", ""],
-        Descripciones: ["Refresco Coca Cola sabor original 600 ml", ""]
+        Img: ["img/coca.jpg",],
+        Title: ["Coca-Cola 600ml",],
+        Precios: ["20.00", ],
+        Descripciones: ["Refresco Coca Cola sabor original 600 ml", ]
     },
     "Doritos": {
-        Img: ["../img/doritos.png", "../img/"],
-        Title: ["Doritos xtra flamin’ hot", ""],
-        Precios: ["20.00", ""],
-        Descripciones: ["Botana Doritos xtra flamin’ hot 61 g", ""]
+        Img: ["img/doritos.png", ],
+        Title: ["Doritos xtra flamin’ hot", ],
+        Precios: ["20.00", ],
+        Descripciones: ["Botana Doritos xtra flamin’ hot 61 g",]
     }
 };
 
