@@ -1,16 +1,16 @@
 // Datos de categorías
 const categorias = {
     "Bebidas": {
-        Img: ["img/coca.jpg",],
-        Title: ["Coca-Cola 600ml",],
-        Precios: ["20.00",],
-        Descripciones: ["Refresco Coca Cola sabor original 600 ml",]
+        Img: ["img/coca.jpg", "img/fanta.jpg"],
+        Title: ["Coca-Cola 600ml", "Fanta 600ml"],
+        Precios: ["20.00", "18.00"],
+        Descripciones: ["Refresco Coca Cola sabor original 600 ml", "Refresco Fanta sabor naranja 600 ml"]
     },
     "Galletas": {
-        Img: [],
-        Title: [],
-        Precios: [],
-        Descripciones: []
+        Img: ["img/emperador.jpg", "img/chokis.jpg"],
+        Title: ["Emperador 91 g", "Chokis 76 g"],
+        Precios: ["22.00", "22.00"],
+        Descripciones: ["Galletas emperador sabor chocolate 91 g", "Galletas chokis con chispas de chocolate 76 g"]
     },
     "Botanas": {
         Img: ["img/doritos.png",],
@@ -51,16 +51,16 @@ const masVendidos = {
 // Datos de marcas
 const marcas = {
     "Gamesa": {
-        Img: [],
-        Title: [],
-        Precios: [],
-        Descripciones: []
+        Img: ["img/emperador.jpg", "img/chokis.jpg"],
+        Title: ["Emperador 91 g", "Chokis 76 g"],
+        Precios: ["22.00", "22.00"],
+        Descripciones: ["Galletas emperador sabor chocolate 91 g", "Galletas chokis con chispas de chocolate 76 g"]
     },
     "Coca-cola": {
-        Img: ["img/coca.jpg",],
-        Title: ["Coca-Cola 600ml",],
-        Precios: ["20.00", ],
-        Descripciones: ["Refresco Coca Cola sabor original 600 ml", ]
+        Img: ["img/coca.jpg", "img/fanta.jpg"],
+        Title: ["Coca-Cola 600ml", "Fanta 600ml"],
+        Precios: ["20.00", "18.00"],
+        Descripciones: ["Refresco Coca Cola sabor original 600 ml", "Refresco Fanta sabor naranja 600 ml"]
     },
     "Doritos": {
         Img: ["img/doritos.png", ],
