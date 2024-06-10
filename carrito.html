@@ -93,9 +93,11 @@
                             <button type="submit" class="btn btn-dark botonesApp">Modificar</button>
                         </div>
                     </form>
+                    <h3>Total General: $<span id="totalGeneral">0.00</span></h3>
                 </div>
             </div>
             <button type="submit" class="btn btn-dark botonesApp" disabled>Confirmar orden</button>
+            <br>
             <br>
         </div>
     </main>
@@ -124,6 +126,7 @@
         function registrarProducto() {
             let index = 0;
             const tabla = document.getElementById("cuerpoTabla");
+            let totalGeneral = 0; // Inicializar el total general
 
             while (true) {
                 const nombre = getParameterByName(`title_${index}`);
@@ -149,7 +152,11 @@
                     cantidadP.innerHTML = cantidad;
 
                     const totalP = document.createElement("td");
-                    totalP.innerHTML = (parseFloat(precio.replace('$', '')) * cantidad).toFixed(2);
+                    const totalProducto = (parseFloat(precio.replace('$', '')) * cantidad).toFixed(2);
+                    totalP.innerHTML = totalProducto;
+
+                    // Sumar al total general
+                    totalGeneral += parseFloat(totalProducto);
 
                     // Crear botón de modificar
                     const modificarP = document.createElement("td");
@@ -183,6 +190,9 @@
                 }
                 index++;
             }
+
+            // Mostrar el total general
+            document.getElementById("totalGeneral").innerText = totalGeneral.toFixed(2);
         }
 
         // Función para mostrar el formulario de modificación
@@ -222,8 +232,15 @@
             const fila = document.getElementById("cuerpoTabla").children[index];
 
             if (fila) {
-                fila.cells[3].innerHTML = nuevaCantidad; // Actualizar la cantidad
-                fila.cells[4].innerHTML = (parseFloat(fila.cells[2].innerHTML.replace('$', '')) * nuevaCantidad).toFixed(2); // Actualizar el total
+                const precio = parseFloat(fila.cells[2].innerHTML.replace('$', ''));
+                const nuevoTotal = (precio * nuevaCantidad).toFixed(2);
+
+                // Actualizar la cantidad y el total del producto
+                fila.cells[3].innerHTML = nuevaCantidad;
+                fila.cells[4].innerHTML = nuevoTotal;
+
+                // Actualizar el total general
+                actualizarTotalGeneral();
 
                 // Ocultar el formulario de modificación
                 document.getElementById("modificarProductoForm").classList.add("hidden");
@@ -232,14 +249,30 @@
             }
         }
 
+        // Función para actualizar el total general
+        function actualizarTotalGeneral() {
+            const filas = document.getElementById("cuerpoTabla").children;
+            let totalGeneral = 0;
+
+            for (const fila of filas) {
+                const totalProducto = parseFloat(fila.cells[4].innerHTML);
+                totalGeneral += totalProducto;
+            }
+
+            document.getElementById("totalGeneral").innerText = totalGeneral.toFixed(2);
+        }
+
         window.addEventListener("load", registrarProducto);
         document.getElementById("modificarProductoForm").addEventListener("submit", actualizarProducto);
 
         function eliminar(element) {
+            // Eliminar la fila del producto
             element.parentElement.parentElement.remove();
+
+            // Actualizar el total general
+            actualizarTotalGeneral();
         }
     </script>
 </body>
 </html>
-
 
